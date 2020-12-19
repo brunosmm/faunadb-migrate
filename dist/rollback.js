@@ -52,7 +52,7 @@ var rollback = function (migrationFolder, client) { return __awaiter(_this, void
             case 0:
                 _a.trys.push([0, 3, , 4]);
                 console.log("Running rollback...");
-                migrations = getLocalMigrations_1.default(migrationFolder);
+                migrations = getLocalMigrations_1.default(migrationFolder).reverse();
                 return [4 /*yield*/, getAppliedMigrations_1.default(client)];
             case 1:
                 appliedMigrations = _a.sent();

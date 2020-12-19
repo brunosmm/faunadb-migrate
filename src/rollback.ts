@@ -10,7 +10,7 @@ const rollback = async (migrationFolder: string, client: Client) => {
   try {
     console.log("Running rollback...");
 
-    const migrations: Migration[] = getLocalMigrations(migrationFolder);
+    const migrations: Migration[] = getLocalMigrations(migrationFolder).reverse();
     const appliedMigrations: any = await getAppliedMigrations(client);
     const lastAppliedMigration: MigrationInstance =
       appliedMigrations.data[appliedMigrations.data.length - 1];
@@ -22,7 +22,7 @@ const rollback = async (migrationFolder: string, client: Client) => {
 
     const rollbackMigrations = migrations.filter((migration: Migration) =>
       lastAppliedMigration.data.migrations.includes(migration.label)
-    );
+    )
     const completedMigrations: Migration[] = await executeMigrations(
       rollbackMigrations,
       "down",
