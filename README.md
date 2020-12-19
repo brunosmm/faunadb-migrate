@@ -4,7 +4,7 @@ FaunaDB Migrate is a tool to help [faunadb](https://fauna.com) developers setup 
 
 ## Install
 ```bash
-npm i -g git+https://github.com/BrunoQuaresma/faunadb-migrate.git\#master
+npm i -g git+https://github.com/brunosmm/faunadb-migrate.git\#master
 ```
 
 ## Before start
