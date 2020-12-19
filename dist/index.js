@@ -19,7 +19,7 @@ exports.MIGRATION_FOLDER = MIGRATION_FOLDER;
 var client = new faunadb_1.default.Client({
     secret: String(process.env.FAUNADB_SECRET)
 });
-commander_1.default.version("0.0.1").description("Fauna migrate tool");
+commander_1.default.version("0.0.2").description("Fauna migrate tool");
 commander_1.default
     .command("setup")
     .description("Setup migrations")

@@ -19,7 +19,7 @@ export {
   MIGRATION_FOLDER
 };
 
-program.version("0.0.1").description("Fauna migrate tool");
+program.version("0.0.2").description("Fauna migrate tool");
 
 program
   .command("setup")
